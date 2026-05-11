@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Global Fluent Business English Missions by Illés Kádek Kata: a speaking-first Business English course app for professional communication." />
+    <title>Global Fluent: Business English Missions</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=20260506-student-email" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <figure class="sidebar-hello-logo">
+          <img src="./FOTO%20APP.png" alt="HELLO Hartmann English Learning and Language Orientation" />
+        </figure>
+        <a class="brand" href="#introduction" data-link="introduction" aria-label="Global Fluent introduction">
+          <span class="brand-mark">GF</span>
+          <span>
+            <strong>Global Fluent</strong>
+            <small>Business English Missions</small>
+            <small>Teacher Illés Kádek Kata</small>
+          </span>
+        </a>
+        <nav class="nav-list" id="navList"></nav>
+        <figure class="sidebar-portrait">
+          <img src="./kata-illes-kadek-optimized.jpg?v=4" alt="Teacher Illés Kádek Kata" />
+          <figcaption>Teacher Illés Kádek Kata</figcaption>
+        </figure>
+        <section class="sidebar-roadmap" aria-label="Course access">
+          <p class="eyebrow">Access</p>
+          <div class="roadmap-note">
+            <p>The course opens after student access. Ask the teacher for your registered learner name and personal student code.</p>
+          </div>
+          <ol>
+            <li><a href="#introduction">Read the introduction</a></li>
+            <li><a href="#student">Enter with your student code</a></li>
+            <li><a href="#teacher">Teacher entrance</a></li>
+          </ol>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <p class="eyebrow">Expansion readiness</p>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="learner-chip" id="activeLearnerChip" aria-label="Active learner">
+            <span>Learner</span>
+            <strong id="activeLearnerName">No learner selected</strong>
+          </div>
+          <div class="stat-row" aria-label="Progress summary">
+            <div class="stat-pill">
+              <span id="xpStat">0</span>
+              <small>XP</small>
+            </div>
+            <div class="stat-pill">
+              <span id="badgeStat">0</span>
+              <small>Badges</small>
+            </div>
+            <div class="stat-pill">
+              <span id="lessonStat">0/12</span>
+              <small>Missions</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="view" id="appView" tabindex="-1"></section>
+      </main>
+    </div>
+
+    <template id="dialogTemplate">
+      <dialog class="modal">
+        <form method="dialog">
+          <button class="icon-button modal-close" value="close" aria-label="Close">x</button>
+        </form>
+        <div class="modal-body"></div>
+      </dialog>
+    </template>
+
+    <script>
+      window.GLOBAL_FLUENT_SUPABASE = {
+        url: "https://szislityzycfehsrbdea.supabase.co",
+        anonKey: "sb_publishable_th8p4nrAhvj5XjCBZDPzZQ_vFqMq6hQ",
+        learnerSnapshotsTable: "learner_examples",
+        teacherAlertsTable: "teacher_alerts",
+        recordingsBucket: "student-recordings",
+        mode: "production"
+      };
+    </script>
+    <script src="./app.js?v=20260506-student-email"></script>
+  </body>
+</html>
